@@ -1,0 +1,118 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../images/ppl.jpg');
+  background-size: cover;
+  overflow: hidden;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 80px auto 0;
+  margin-bottom: 100px;
+}
+
+.form {
+  padding: 40px 40px 0;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form input[type="email"]:focus,
+.form input[type="password"]:focus,
+.form input[type="text"]:focus {
+  outline: none;
+  border-color: #1e1e1e;
+}
+
+#wrapper-cap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#wrapper-cap input[type="text"] {
+  width: calc(90% - 40px);
+}
+
+#wrapper-cap button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#wrapper-cap button i {
+  font-size: 16px;
+}
+
+#cap {
+  display: none;
+  color: red;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cta {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.cta a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .module {
+    width: 400px;
+  }
+}

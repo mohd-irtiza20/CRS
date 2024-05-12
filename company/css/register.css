@@ -1,0 +1,78 @@
+body {
+  background-image: url('../images/ppl.jpg');
+  background-size: cover;
+  overflow: hidden;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.module {
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.form {
+  padding: 40px 40px 0;
+  text-align: center;
+  /* Center the content */
+
+}
+
+.form h2 {
+  font-style: 10px;
+}
+
+.cta {
+  padding: 20px;
+  text-align: center;
+}
+
+.cta a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.module form {
+  display: grid;
+  gap: 20px;
+}
+
+.module form input,
+.module form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.module form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.module form input:focus,
+.module form textarea:focus {
+  outline: none;
+  border-color: #1e1e1e;
+}
+
+.module form button:hover {
+  background-color: #454545;
+}

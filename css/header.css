@@ -1,0 +1,62 @@
+ .header2 {
+   background-color: blue;
+   color: #fff;
+   padding-top: 8px;
+   padding-bottom: 6px;
+   position: sticky;
+   top: 0;
+
+
+ }
+
+ .title {
+   font-weight: 900;
+   color: #fff;
+   word-spacing: 5px;
+   text-decoration: none;
+   text-transform: capitalize;
+
+
+ }
+
+ .title:hover {
+   color: lavenderblush;
+   text-decoration: none;
+ }
+
+ .both {
+   display: block;
+ }
+
+ /* Navigation Bar */
+ .all_link {
+   padding: 10px;
+   text-align: center;
+ }
+
+ .all_link li {
+   display: inline-block;
+   /* margin-left: 15px; */
+ }
+
+ .all_link a {
+   padding: 10px 15px;
+   font-size: 14px;
+   font-weight: 400;
+   letter-spacing: 1px;
+   color: #fff;
+/*   text-decoration: none;*/
+ }
+
+ .all_link a:hover {
+   color: #fff;s
+ }
+
+/*  Responsive Styles */
+ @media screen and (max-width: 768px) {
+   .all_link li {
+     display: block;
+     margin: 5px 0;
+   }
+ }
+ 
