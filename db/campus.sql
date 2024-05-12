@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 12, 2024 at 06:56 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Host: localhost
+-- Generation Time: May 12, 2024 at 07:13 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -219,8 +219,8 @@ CREATE TABLE `users` (
   `password` varchar(50) DEFAULT NULL,
   `doj` timestamp NOT NULL DEFAULT current_timestamp(),
   `status` tinyint(4) NOT NULL DEFAULT 0,
-  `resume` varchar(500) NOT NULL,
-  `profile` varchar(500) NOT NULL,
+  `resume` varchar(500) DEFAULT NULL,
+  `profile` varchar(500) DEFAULT NULL,
   `notification` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -232,7 +232,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `mobile`, `industry`, `experience`, 
 (4, 'Mohd Irtiza', 'mohdirtiza20@gmail.com', '7889329197', 1, 'Fresher', 'Jammu and Kashmir', 'I am a dedicated and passionate individual.', 'irtiza', '2024-04-14 18:30:00', 1, 'resumes/19770214301715350307Resume (3).pdf', 'img/7056364451715350226myphoto.jpg', 'You can now use your account'),
 (5, 'Muntazir', 'muntazir@gmail.com', '7006769862', 2, 'Fresher', 'Chandigarh', NULL, 'muntazir', '2024-04-15 10:40:31', 1, 'resumes/13937243851713177966Mohd Irtiza CV (2).pdf', 'img/13989367251714720930mun.jpg', NULL),
 (6, 'Zubair', 'zubair@gmail.com', '9541826756', 1, '1', 'Delhi', 'I am good ', 'zubair', '2024-05-02 19:44:30', 1, '', 'img/10502510161714721251zub-fotor.png', NULL),
-(7, 'Musaib Amin', 'musaib@gmail.com', '8082196213', 2, '5', 'Mumbai', 'A dedicated aspirant.', 'musain', '2024-05-04 09:34:53', 1, '', '', 'You can now use your account');
+(7, 'Musaib Amin', 'musaib@gmail.com', '8082196213', 2, '5', 'Mumbai', 'A dedicated aspirant.', 'musain', '2024-05-04 09:34:53', 1, '', '', 'You can now use your account'),
+(9, 'Anees', 'anees@gmail.com', '9596568850', 2, '1', 'Safapora', 'Student', 'anees', '2024-05-12 05:10:16', 1, NULL, NULL, 'You can now use your account');
 
 --
 -- Indexes for dumped tables
@@ -343,7 +344,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
@@ -362,24 +363,6 @@ ALTER TABLE `applications`
 ALTER TABLE `jobs`
   ADD CONSTRAINT `jobs_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `company_login` (`id`),
   ADD CONSTRAINT `jobs_ibfk_2` FOREIGN KEY (`industry`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `my_details`
---
-ALTER TABLE `my_details`
-  ADD CONSTRAINT `my_details_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `reviews`
---
-ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`industry`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
